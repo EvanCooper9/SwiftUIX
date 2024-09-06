@@ -85,6 +85,7 @@ extension View {
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 extension View {
+    @MainActor
     public func _SwiftUIX_onKeyPress(
         phases: _SwiftUIX_KeyPress.Phases = [.down, .repeat],
         action: @escaping @MainActor (_SwiftUIX_KeyPress) -> _SwiftUIX_KeyPress.Result
@@ -151,6 +152,7 @@ extension View {
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 extension View {
+    @MainActor
     public func _overrideOnMoveCommand(
         perform action: (@MainActor (_SwiftUIX_MoveCommandDirection) -> _SwiftUIX_KeyPress.Result)?
     ) -> some View {
@@ -167,6 +169,7 @@ extension View {
         }
     }
     
+    @MainActor
     public func _overrideOnExitCommand(
         perform action: (@MainActor () -> _SwiftUIX_KeyPress.Result)?
     ) -> some View {
@@ -183,6 +186,7 @@ extension View {
         }
     }
     
+    @MainActor
     public func _overrideOnExitCommand(
         perform action: (@MainActor () -> Void)?
     ) -> some View {
@@ -197,6 +201,7 @@ extension View {
         }
     }
     
+    @MainActor
     public func _overrideOnDeleteCommand(
         perform action: (@MainActor () -> _SwiftUIX_KeyPress.Result)?
     ) -> some View {
@@ -213,6 +218,7 @@ extension View {
         }
     }
     
+    @MainActor
     public func _overrideOnDeleteCommand(
         perform action: (@MainActor () -> Void)?
     ) -> some View {
